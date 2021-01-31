@@ -38,9 +38,9 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Affis Admin\n' 
+            + 'FN:Ptri Ajh\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6289636032177:+62 896-3603-2177\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
@@ -50,7 +50,7 @@ cr = '*BOT INI SUDAH TERVERIFIKASI*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["62895710073737@s.whatsapp.net","6282334297175@s.whatsapp.net"] 
+const ownerNumber = ["6289636032177@s.whatsapp.net","6288709725839@s.whatsapp.net"] 
 /************************************/
 
        
@@ -247,7 +247,7 @@ function kyun(seconds){
 const client = new WAConnection()
    client.on('qr', qr => {
    qrcode.generate(qr, { small: true })
-   console.log(color('[','white'),color('∆','red'),color(']','white'),color('qr already scan.subscribe','white'),color('YOU','red'),color('TUBE','white'),color('ampibi gaming','yellow'))
+   console.log(color('[','white'),color('∆','red'),color(']','white'),color('qr already scan.subscribe','white'),color('YOU','red'),color('TUBE','white'),color('AYBPR CHANNEL','yellow'))
 })
 
 client.on('credentials-updated', () => {
@@ -607,7 +607,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'buylimit':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 300
+				const koinPerlimit = 500
 				const total = koinPerlimit * payout
 				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
 				if ( checkATMuser(sender) >= total ) {
@@ -1073,7 +1073,7 @@ client.on('group-participants-update', async (anu) => {
                 const umurUser = q.substring(q.lastIndexOf('|') + 1)
                 const serialUser = createSerial(20)
                 if (namaUser.length >= 30) return reply(`why is your name so long it's a name or a train`)
-                if (umurUser.length >= 3, umurUser.length <= 1) return reply(`your age is too young / old minimum age 10 years and maximum 40 years`)
+                if (umurUser.length >= 3, umurUser.length <= 1) return reply(`your age is too young / old minimum age 10 years and maximum 9999999999 years`)
                 veri = sender
                 if (isGroup) {
                     addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
@@ -1094,12 +1094,12 @@ client.on('group-participants-update', async (anu) => {
                       if (isLimit(sender)) return reply(ind.limitend(pushname))
                       if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan oleh owner`)
                       if (isOwner) {
-                      const one = 999999999
+                      const one = 999
                       addLevelingXp(sender, one)
-                      addLevelingLevel(sender, 99)
+                      addLevelingLevel(sender, 19)
                       reply(`karena anda owner kami dari team bot mengirim ${one}Xp untuk anda`)
                       }else{
-                      const mining = Math.ceil(Math.random() * 10000)
+                      const mining = Math.ceil(Math.random() * 100)
                       addLevelingXp(sender, mining)
                       await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp*`)
                       }
