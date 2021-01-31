@@ -23,7 +23,7 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar affis|17*`
+	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar kzybot|17*`
 }
 
 exports.rediregis = () => {
@@ -124,7 +124,9 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Role* : ${role}
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *User register* : ${_registered.length}
-┗━━━⊱  ⸨ *AFFIS* ⸩  ⊰━━━━┛
+┣⊱ *Time* : *${time}Wib*
+┣⊱ *Prefix saat ini : *${prefix}menu*
+┗━━━⊱  ⸨ *kzybot* ⸩  ⊰━━━━┛
 
 
 ┏━━⊱ *MAKER MENU* ⊰━━┓
@@ -210,17 +212,13 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}event* [1/0]
 ┣⊱ *${prefix}clone* <tag>
 ┣⊱ *${prefix}setppbot*
-┣━━⊱ *THANGKS TO* ⊰━━┫
-┃
-┣⊱ *AFFIS JUNIANTO* <dev>
-┣⊱ *FADHIL GRAPHY* <partner>
+┣━━⊱ *THANKS TO* ⊰━━┫
+┣⊱ *Affis* <dev>
+┣⊱ *HANS* <dev>
+┣⊱ *kzybot* <dev>
 ┣⊱ *MHANKBARBARS* <sc ori>
-┣⊱ *MYBOT TEAM* <team>
-┃
-┣⊱ NOTE : TQTO DI HAPUS
-┃ GW GAK UP LAGI OKE
-┃
-┗━━⊱  ⸨ *X-BOT* ⸩  ⊰━━━━┛
+┣⊱ *AYBPR TEAM* <team>
+┗━━⊱  ⸨ *kzybot* ⸩  ⊰━━━━┛
 `
 }
 
