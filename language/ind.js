@@ -124,8 +124,8 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Role* : ${role}
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *User register* : ${_registered.length}
-┣⊱ *Time* : *${time}Wib*
-┣⊱ *Prefix saat ini : *${prefix}menu*
+┣⊱ *Time* : ${time}Wib
+┣⊱ *Prefix saat ini* : ${prefix}menu
 ┗━━━⊱  ⸨ *kzybot* ⸩  ⊰━━━━┛
 
 
