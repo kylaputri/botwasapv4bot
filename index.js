@@ -38,7 +38,7 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Ptri Ajh\n' 
+            + 'FN:Ptri \n' 
             + 'ORG: Pengembang XBot;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=6289636032177:+62 896-3603-2177\n' 
             + 'END:VCARD' 
@@ -50,7 +50,7 @@ cr = '*BOT INI SUDAH TERVERIFIKASI*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["6289636032177@s.whatsapp.net","6288709725839@s.whatsapp.net"] 
+const ownerNumber = ["6289636032177@s.whatsapp.net","6283843313959@s.whatsapp.net"] 
 /************************************/
 
        
