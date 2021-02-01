@@ -40,7 +40,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:Ptri \n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6289636032177:+62 896-3603-2177\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6288218906206:+62 88218906206\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
@@ -1676,9 +1676,9 @@ client.on('group-participants-update', async (anu) => {
                  case 'simi':
 					if (args.length < 1) return reply('Hai')
 					teks = body.slice(5)
-					anu = await fetchJson(`http://id.julianofc.my.id/api/rest/simsimi/?qs=${teks}`, {method: 'get'})
+					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}`, {method: 'get'})
 					if (anu.error) return reply('Simi ga tau kak')
-					reply(`${anu.answer}\n\n*Simsimi chat*`)
+					reply(`${anu.success}\n\n*Simsimi chat*`)
 					break
 				case 'simih':
 					if (!isGroup) return reply(ind.groupo())
@@ -1778,6 +1778,17 @@ client.on('group-participants-update', async (anu) => {
 					} else {
 						reply(ind.satukos())
 					}
+					break
+					case 'delete':
+					case 'del':
+					case 'hpus':
+					case 'delet':
+					case 'hapuschat':
+					case 'delchat':
+					if (!isGroup)return reply(mess.only.group)
+          if (!isRegister) return reply(mess.only.daftarB)
+					if (!isGroupAdmins)return reply(mess.only.admin)
+					rXa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 				case 'clone':
 					if (!isGroup) return reply(ind.groupo())
