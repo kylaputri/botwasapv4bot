@@ -1671,12 +1671,14 @@ client.on('group-participants-update', async (anu) => {
 					})
 					await limitAdd(sender)
 					break
+                 case 'bot':
+                 case 'simsimi':
                  case 'simi':
-					if (args.length < 1) return reply('Textnya mana um?')
+					if (args.length < 1) return reply('Hai')
 					teks = body.slice(5)
-					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
-					//if (anu.error) return reply('Simi ga tau kak')
-					reply(anu)
+					anu = await fetchJson(`http://id.julianofc.my.id/api/rest/simsimi/?qs=${teks}`, {method: 'get'})
+					if (anu.error) return reply('Simi ga tau kak')
+					reply(`${anu.answer}\n\n*Simsimi chat*`)
 					break
 				case 'simih':
 					if (!isGroup) return reply(ind.groupo())
