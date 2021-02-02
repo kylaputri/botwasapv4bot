@@ -23,7 +23,7 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar kzybot|17*`
+	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar ${pushname} |17*`
 }
 
 exports.rediregis = () => {
@@ -124,7 +124,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Role* : ${role}
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *User register* : ${_registered.length}
-┣⊱ *Prefix saat ini* : ${prefix}
+┣⊱ *Prefix saat ini* : ${prefix}menu
 ┗━━━⊱  ⸨ *kzybot* ⸩  ⊰━━━━┛
 
 
@@ -177,7 +177,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣━━⊱ *LIMIT & UANG* ⊰━┫
 ┣⊱ *${prefix}limit* 
 ┣⊱ *${prefix}buylimit* <jumblah>
-┣⊱ *${prefix}transfer* <tag |jumblah>
+┣⊱ *${prefix}transfer* <tag |jumlah>
 ┣⊱ *${prefix}dompet*
 ┣━━⊱ *GROUP MENU* ⊰━┫
 ┣⊱ *${prefix}hidetag*
@@ -199,8 +199,8 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}simih* [1/0]
 ┣⊱ *${prefix}welcome* [1/0]
 ┣━━⊱ *OWNER MENU* ⊰━┫
-┣⊱ *${prefix}bc* <teks>
-┣⊱ *${prefix}bcgc* <teks>
+┣⊱ *${prefix}bc* [error]
+┣⊱ *${prefix}bcgc* [error]
 ┣⊱ *${prefix}kickall* <rawan ban>
 ┣⊱ *${prefix}setreply* <teks>
 ┣⊱ *${prefix}setprefix* <symbol>
