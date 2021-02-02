@@ -1679,12 +1679,12 @@ client.on('group-participants-update', async (anu) => {
                  case 'bot':
                  case 'simsimi':
                  case 'simi':
+                 case 'b':
 					if (args.length < 1) return reply('Hai')
 					teks = body.slice(5)
-					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}`, {method: 'get'})
-					if (anu.error) return reply('Simi ga tau kak')
+					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}&lang=id`, {method: 'get'})
+					if (anu.erorr) return reply('Simi ga tau kak')
 					reply(`${anu.success}\n\n*Simsimi chat*`)
-					break
 				case 'simih':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
