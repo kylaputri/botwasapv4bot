@@ -38,19 +38,19 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Ptri \n' 
+            + 'FN:Ptri\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6288218906206:+62 88218906206\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6289636032177:+62 896-3603-2177\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
-limitawal = 50
-memberlimit = 50
+limitawal = 100
+memberlimit = 100
 cr = '*BOT INI SUDAH TERVERIFIKASI*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["6289636032177@s.whatsapp.net","6283843313959@s.whatsapp.net"] 
+const ownerNumber = ["6289636032177@s.whatsapp.net","6283843313959@s.whatsapp.net","6285602294077@s.whatsapp.net"]
 /************************************/
 
        
@@ -281,7 +281,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `akhirnya beban group berkurang 𝟭,bye bye🥳 @${num.split('@')[0]} jasamu akan di kubur dalam²`
+				teks = `Kaka @${num.split('@')[0]} NITIP BAKSO YA 5 MANGKOK `
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -607,7 +607,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'buylimit':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 1
+				const koinPerlimit = 500
 				const total = koinPerlimit * payout
 				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
 				if ( checkATMuser(sender) >= total ) {
@@ -742,6 +742,8 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break
                 case 'joox':
+                case 'musik':
+                case 'lagu':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                 data = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=BotWeA`, {method: 'get'})
@@ -754,6 +756,8 @@ client.on('group-participants-update', async (anu) => {
                 await limitAdd(sender)
                 break
                 case 'ytmp3':
+                case 'ytmusik':
+                case 'ytm':
                     if (!isRegistered) return reply(ind.noregis())
                     if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if (args.length < 1) return reply('Urlnya mana um?')
@@ -768,6 +772,7 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break
 				case 'limit':
+				case 'ceklimit':
 				   if (!isRegistered) return reply(ind.noregis())
 				   checkLimit(sender)
 					break
