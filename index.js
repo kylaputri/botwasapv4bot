@@ -44,8 +44,8 @@ const vcard = 'BEGIN:VCARD\n'
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
-limitawal = 30
-memberlimit = 30
+limitawal = 50
+memberlimit = 50
 cr = '*BOT INI SUDAH TERVERIFIKASI*'
 /*************************************/
 
@@ -607,7 +607,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'buylimit':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 500
+				const koinPerlimit = 1
 				const total = koinPerlimit * payout
 				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
 				if ( checkATMuser(sender) >= total ) {
