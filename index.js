@@ -38,15 +38,15 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Ptri\n' 
+            + 'FN:Hans\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6289636032177:+62 896-3603-2177\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6283843313959:+62 838-4331-3959\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
 limitawal = 30
 memberlimit = 30
-cr = '*BOT INI SUDAH TERVERIFIKASI*'
+cr = '*_official account Kylabot V.4_*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
@@ -1072,6 +1072,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek})
 					break
 				case 'daftar':
+				case 'register':
                 if (isRegistered) return  reply(ind.rediregis())
                 if (!q.includes('|')) return  reply(ind.wrongf())
                 const namaUser = q.substring(0, q.indexOf('|') - 0)
@@ -1153,6 +1154,8 @@ client.on('group-participants-update', async (anu) => {
 					break
                case 'help': 
 				case 'menu':
+				case 'm':
+				case 'p':
 				if (!isRegistered) return reply(ind.noregis())
 				    const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
 				    const uangku = checkATMuser(sender)
@@ -1181,7 +1184,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*OWNER* : *AMPIBI*\n*AUTHOR* : AMPIBI\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
+					teks = `*Nama bot* : ${me.name}\n*OWNER* : *Hans*\n*AUTHOR* : AYBPR\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1663,6 +1666,8 @@ client.on('group-participants-update', async (anu) => {
 					mentions(teks, groupAdmins, true)
 					break
 				case 'toimg':
+				case 'toi':
+				case 'ti':
 				if (!isRegistered) return reply(ind.noregis())
 				if (!isQuotedSticker) return reply('𝗥𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 !')
 					reply(ind.wait())
@@ -1679,14 +1684,15 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break
                  case 'bot':
-                 case 'simsimi':
                  case 'simi':
                  case 'b':
-					if (args.length < 1) return reply('Hai')
+                 case 'sim':
+					if (args.length < 1) return reply('Hai kak. ${prefix}menu')
 					teks = body.slice(5)
 					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}&lang=id`, {method: 'get'})
 					if (anu.erorr) return reply('Simi ga tau kak')
 					reply(`${anu.success}\n\n*Simsimi chat*`)
+					break
 				case 'simih':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
