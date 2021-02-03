@@ -125,8 +125,8 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Role* : ${role}
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *User register* : ${_registered.length}
-┣⊱ *Prefix saat ini* : ${prefix}menu
-┣⊱ *buat tes botnya on/off* : ${prefix}bot
+┣⊱ *Prefix saat ini* : *${prefix}menu*
+┣⊱ *buat tes botnya on/off* : *${prefix}bot*
 ┗━━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
 
 
@@ -196,7 +196,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}promote* <tag>
 ┣⊱ *${prefix}listadmin*
 ┣⊱ *${prefix}group* [buka/tutup]
-┣⊱ *${prefix}delete*
+┣⊱ *${prefix}delete* [tag pesan]
 ┣⊱ *${prefix}leveling* [enable/disable]
 ┣⊱ *${prefix}nsfw* [1/0]
 ┣⊱ *${prefix}simih* [1/0]
@@ -218,8 +218,9 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣━━⊱ *THANKS TO* ⊰━━┫
 ┣⊱ *Affis* <dev>
 ┣⊱ *HANS* <dev>
-┣⊱ *Amrul <dev>
-┣⊱ *Nabila <dev>
+┣⊱ *Amrul* <dev>
+┣⊱ *Nabila* <dev>
+┣⊱ *Kyla*
 ┣⊱ *MHANKBARBARS* <sc ori>
 ┣⊱ *AYBPR TEAM* <team>
 ┗━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
