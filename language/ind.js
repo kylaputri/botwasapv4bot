@@ -119,13 +119,15 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┏━━━⊱  *ABOUT USER*  ⊰━━┓
 ┣⊱ *Nama* : ${pushname}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
-┣⊱ *Uang mu* : Rp${uangku}
+┣⊱ *Uang mu* : Rp${uangku} 
+┣⊱ *note: buat beli Limit!*
 ┣⊱ *XP* : ${getLevelingXp(sender)}/${reqXp}
 ┣⊱ *Role* : ${role}
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *User register* : ${_registered.length}
 ┣⊱ *Prefix saat ini* : ${prefix}menu
-┗━━━⊱  ⸨ *kzybot* ⸩  ⊰━━━━┛
+┣⊱ *buat tes botnya on/off* : ${prefix}bot
+┗━━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
 
 
 ┏━━⊱ *MAKER MENU* ⊰━━┓
@@ -194,9 +196,11 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}promote* <tag>
 ┣⊱ *${prefix}listadmin*
 ┣⊱ *${prefix}group* [buka/tutup]
+┣⊱ *${prefix}delete*
 ┣⊱ *${prefix}leveling* [enable/disable]
 ┣⊱ *${prefix}nsfw* [1/0]
 ┣⊱ *${prefix}simih* [1/0]
+┣⊱ *${prefix}bot* <teks>
 ┣⊱ *${prefix}welcome* [1/0]
 ┣━━⊱ *OWNER MENU* ⊰━┫
 ┣⊱ *${prefix}bc* [error]
@@ -214,10 +218,11 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣━━⊱ *THANKS TO* ⊰━━┫
 ┣⊱ *Affis* <dev>
 ┣⊱ *HANS* <dev>
-┣⊱ *kzybot* <dev>
+┣⊱ *Amrul <dev>
+┣⊱ *Nabila <dev>
 ┣⊱ *MHANKBARBARS* <sc ori>
 ┣⊱ *AYBPR TEAM* <team>
-┗━━⊱  ⸨ *kzybot* ⸩  ⊰━━━━┛
+┗━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
 `
 }
 
