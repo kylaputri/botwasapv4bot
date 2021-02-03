@@ -44,8 +44,8 @@ const vcard = 'BEGIN:VCARD\n'
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
-limitawal = 100
-memberlimit = 100
+limitawal = 30
+memberlimit = 30
 cr = '*BOT INI SUDAH TERVERIFIKASI*'
 /*************************************/
 
@@ -1363,6 +1363,8 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'stiker': 
 				case 'sticker':
+				case 'stikergif':
+				case 'stickergif':
 				case 's':
 				    if (isLimit(sender)) return reply(ind.limitend(pusname))
                     await limitAdd(sender)
@@ -1790,10 +1792,11 @@ client.on('group-participants-update', async (anu) => {
 					case 'delet':
 					case 'hapuschat':
 					case 'delchat':
+					case 'delete':
+					case 'd':
 					if (!isGroup)return reply(mess.only.group)
-          if (!isRegister) return reply(mess.only.daftarB)
-					if (!isGroupAdmins)return reply(mess.only.admin)
-					rXa.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 				case 'clone':
 					if (!isGroup) return reply(ind.groupo())
