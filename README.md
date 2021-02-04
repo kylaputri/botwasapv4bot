@@ -17,7 +17,7 @@ you've just cloned!!
 
 ```bash
 > git clone https://github.com/kylaputri/botwasapv4kylaputri
-> cd botwasapv4kylaputri
+> cd botwasapv4bot
 > bash install.sh
 > node index.js
 ```
