@@ -1846,7 +1846,7 @@ client.on('group-participants-update', async (anu) => {
 					case '😠':
 					case '😳':
 					if (!isGroup)return reply(mess.only.group)
-					if (!isGroupOwner) return reply(mess.only.ownerb)
+					if (!isGroupOwner) return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 				case 'clone':
