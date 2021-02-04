@@ -35,7 +35,7 @@ you've just cloned!!
 ```
 
 
-### Usage
+### START BOT!
 ```bash
 > node index.js
 ```
