@@ -1830,7 +1830,7 @@ client.on('group-participants-update', async (anu) => {
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, 1)
 						fs.writeFileSync('./database/bot/welkom.json', JSON.stringify(welkom))
-						reply('❬Sukses❭ menonaktifkan fitur welcome di group ini ✔)
+						reply('❬Sukses❭ menonaktifkan fitur welcome di group ini ✔')
 					} else {
 						reply(ind.satukos())
 					}
