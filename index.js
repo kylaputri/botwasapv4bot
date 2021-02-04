@@ -46,7 +46,7 @@ blocked = []
 prefix = '>','.','#','!','?','$','+','@'
 limitawal = 99999
 memberlimit = 10
-cr = '*_Official account Kylabot V.4_*'
+cr = '*_Official account Kylabot V.4.1_*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
@@ -752,6 +752,22 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender)
 					break
+					case 'bugreport':
+					case 'bug':
+                if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+                     const pesan = body.slice(10)
+                      if (pesan.length > 1000) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 1000 Teks', msgType.text, {quoted: mek})
+                        var nomor = mek.participant
+                       const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
+
+                      var options = {
+                         text: teks1,
+                         contextInfo: {mentionedJid: [nomor]},
+                     }
+                    client.sendMessage('6283843313959@s.whatsapp.net', options, text, {quoted: mek})
+                    reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
+                    break
                 case 'joox':
                 case 'musik':
                 case 'lagu':
@@ -1119,14 +1135,14 @@ client.on('group-participants-update', async (anu) => {
             	case 'mng':
                       if (!isRegistered) return reply(ind.noregis())
                       if (isLimit(sender)) return reply(ind.limitend(pushname))
-                      if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan oleh owner`)
+                      if (!isEventon) return reply(`maaf kak ${pushname} event mining tidak di aktifkan oleh Owner`)
                       if (isOwner) {
                       const one = 100
                       addLevelingXp(sender, one)
                       addLevelingLevel(sender, 19)
-                      reply(`karena anda owner kami dari team bot mengirim ${one}Xp untuk anda`)
+                      reply(`karena Anda owner kami dari team bot mengirim ${one}Xp untuk Anda`)
                       }else{
-                      const mining = Math.ceil(Math.random() * 100)
+                      const mining = Math.ceil(Math.random() * 1000)
                       addLevelingXp(sender, mining)
                       await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp*`)
                       }
@@ -1142,6 +1158,7 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break
 				case 'kapankah':
+				case 'kapan':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					kapankah = body.slice(1)
@@ -1151,6 +1168,7 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break
            case 'apakah':
+           case 'apa':
            if (!isRegistered) return reply(ind.noregis())
            if (isLimit(sender)) return reply(ind.limitend(pusname))
 					apakah = body.slice(1)
@@ -1765,12 +1783,12 @@ client.on('group-participants-update', async (anu) => {
                 if (!isGroup) return reply(ind.groupo())
                 if (!isGroupAdmins) return reply(ind.admin())
                 if (args.length < 1) return reply('Boo :??')
-                if (args[0] === 'enable') {
+                if (args[0] === 'Aktif') {
                     if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
                     _leveling.push(from)
                     fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
                      reply(ind.lvlon())
-                } else if (args[0] === 'disable') {
+                } else if (args[0] === 'Off') {
                     _leveling.splice(from, 1)
                     fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
                      reply(ind.lvloff())
@@ -1803,16 +1821,16 @@ client.on('group-participants-update', async (anu) => {
 				case 'sambutan':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
-					if (args.length < 1) return reply('pesan welcome belum diaktifkan!')
+					if (args.length < 1) return reply('hmm Kamu siapa?')
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('*SUDAH AKTIF TOD* !!!')
 						welkom.push(from)
 						fs.writeFileSync('./database/bot/welkom.json', JSON.stringify(welkom))
-						reply('❬ 𝗦𝗨𝗞𝗦𝗘𝗦 ❭ 𝗠𝗲𝗻𝗴𝗮𝗸𝘁𝗶𝗳𝗸𝗮𝗻 𝗳𝗶𝘁𝘂𝗿 𝘄𝗲𝗹𝗰𝗼𝗺𝗲/𝗹𝗲𝗳𝘁 𝗱𝗶 𝗴𝗿𝗼𝘂𝗽 𝗶𝗻𝗶️')
+						reply('❬Sukses❭ mengaktifkan fitur welcome di group ini ✔️️')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, 1)
 						fs.writeFileSync('./database/bot/welkom.json', JSON.stringify(welkom))
-						reply('❬ 𝗦𝗨𝗞𝗦𝗘𝗦 ❭ 𝗠𝗲𝗻𝗼𝗻𝗮𝗸𝘁𝗶𝗳𝗸𝗮𝗻 𝗳𝗶𝘁𝘂𝗿 𝘄𝗲𝗹𝗰𝗼𝗺𝗲/𝗹𝗲𝗳𝘁 𝗱𝗶 𝗴𝗿𝗼𝘂𝗽 𝗶𝗻𝗶️')
+						reply('❬Sukses❭ menonaktifkan fitur welcome di group ini ✔)
 					} else {
 						reply(ind.satukos())
 					}
