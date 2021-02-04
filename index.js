@@ -43,8 +43,8 @@ const vcard = 'BEGIN:VCARD\n'
             + 'TEL;type=CELL;type=VOICE;waid=6283843313959:+62 838-4331-3959\n' 
             + 'END:VCARD' 
 blocked = []   
-prefix = '>','.','#','!','?','$','+','@'
-limitawal = 99999
+prefix = '#'
+limitawal = 100
 memberlimit = 10
 cr = '*_Official account Kylabot V.4.1_*'
 /*************************************/
@@ -595,7 +595,7 @@ client.on('group-participants-update', async (anu) => {
                 const jumblah = q.substring(q.lastIndexOf('|') + 1)
                 if (checkATMuser(sender) < jumblah) return reply(`uang mu tidak mencukupi untuk melakukan transfer`)
                 const tujuantf = `${tujuan.replace("@", '')}@s.whatsapp.net`
-                fee = 0.100 *  jumlah
+                fee = 0.005 *  jumlah
                 hasiltf = jumblah - fee
                 addKoinUser(tujuantf, hasiltf)
                 confirmATM(sender, jumblah)
@@ -729,7 +729,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, buff, image, {quoted: mek})
 					await limitAdd(sender)
 					break
-                case 'husbu':
+                case 'husbu2819328':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 				    try {
@@ -757,7 +757,7 @@ client.on('group-participants-update', async (anu) => {
                 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
                      const pesan = body.slice(10)
-                      if (pesan.length > 1000) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 1000 Teks', msgType.text, {quoted: mek})
+                      if (pesan.length > 300) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
                         var nomor = mek.participant
                        const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
 
@@ -1109,6 +1109,8 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'daftar':
 				case 'register':
+				case 'daf':
+				case 'req':
                 if (isRegistered) return  reply(ind.rediregis())
                 if (!q.includes('|')) return  reply(ind.wrongf())
                 const namaUser = q.substring(0, q.indexOf('|') - 0)
@@ -1229,6 +1231,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'blocklist': 
 				case 'bloklist':
+				case 'dftrblok':
 					teks = 'list blockir :\n'
 					for (let block of blocked) {
 						teks += `┣➢ @${block.split('@')[0]}\n`
@@ -1565,7 +1568,7 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerb())
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
-					client.sendMessage(from, `𝗽𝗲𝗿𝗶??𝘁𝗮𝗵 𝗗𝗶𝘁𝗲𝗿𝗶𝗺𝗮, 𝗺𝗲𝗺𝗯𝘂𝗸𝗮 ${body.slice(9)}@c.us`, text)
+					client.sendMessage(from, `perintah Diterima, membuka blokir ${body.slice(9)}@c.us`, text)
 					break
 				case 'leave': 
 				case 'keluar':
@@ -1604,7 +1607,7 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
 					if (args.length < 1) return reply('Yang mau di add siapa? dajjal ya?')
-					if (args[0].startsWith('628')) return reply('Gunakan kode negara cok!')
+					if (args[0].startsWith('08')) return reply('Gunakan kode negara cok!')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						client.groupAdd(from, [num])
@@ -1739,7 +1742,7 @@ client.on('group-participants-update', async (anu) => {
                  case 'simi':
                  case 'b':
                  case 'sim':
-					if (args.length < 1) return reply('Assalamualaikum kak😊')
+					if (args.length < 1) return reply('HAI ANJIM😊')
 					teks = body.slice(5)
 					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}&lang=id`, {method: 'get'})
 					if (anu.erorr) return reply('Simi ga tau kak')
@@ -1783,12 +1786,12 @@ client.on('group-participants-update', async (anu) => {
                 if (!isGroup) return reply(ind.groupo())
                 if (!isGroupAdmins) return reply(ind.admin())
                 if (args.length < 1) return reply('Boo :??')
-                if (args[0] === 'Aktif') {
+                if (args[0] === 'enable') {
                     if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
                     _leveling.push(from)
                     fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
                      reply(ind.lvlon())
-                } else if (args[0] === 'Off') {
+                } else if (args[0] === 'disable') {
                     _leveling.splice(from, 1)
                     fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
                      reply(ind.lvloff())
@@ -1796,14 +1799,20 @@ client.on('group-participants-update', async (anu) => {
                     reply(ind.satukos())
                 }
 					break
-                 case 'block':
+                case 'block':
+			       case 'blok':
+			       case 'blokir':
+			       case 'blockir':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerb())
 					client.blockUser (`${body.slice(8)}@c.us`, "add")
 					client.sendMessage(from, `perintah Diterima, memblokir wa.me${body.slice(8)}@c.us`, text)
 					break
-				case 'unblock':
+				 case 'unblock':
+                    case 'unblok':
+                    case 'unblockir':
+                    case 'unblokir':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(ind.group())
 					if (!isOwner) return reply(ind.ownerb())
@@ -1838,16 +1847,16 @@ client.on('group-participants-update', async (anu) => {
                  case 'event':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerb())
-					if (args.length < 1) return reply('Boo :𝘃')
+					if (args.length < 1) return reply('Kamu siapa?')
 					if (Number(args[0]) === 1) {
 						if (isEventon) return reply('*SUDAH AKTIF* !!!')
 						event.push(from)
 						fs.writeFileSync('./database/bot/event.json', JSON.stringify(event))
-						reply('*❬ 𝗦𝗨𝗞𝗦𝗘𝗦 ❭ 𝗠𝗲𝗻𝗴𝗮𝗸𝘁𝗶𝗳𝗸𝗮𝗻 EVENT 𝗱𝗶 𝗴𝗿𝗼𝘂𝗽 𝗶𝗻𝗶️*')
+						reply('*❬ SUKSES ❭ MENGAKTIFKAN EVENT DIDALAM GRUP️*')
 					} else if (Number(args[0]) === 0) {
 						event.splice(from, 1)
 						fs.writeFileSync('./database/bot/event.json', JSON.stringify(event))
-						reply('*❬ 𝗦𝗨𝗞𝗦𝗘𝗦 ❭ 𝗠𝗲𝗻𝗼𝗻𝗮𝗸𝘁𝗶𝗳𝗸??𝗻 EVENT 𝗱𝗶 𝗴𝗿𝗼𝘂𝗽 𝗶𝗻𝗶️*')
+						reply('*❬ SUKSES ❭ MENONAKTIFKAN EVENT DIDALAM GRUP️*')
 					} else {
 						reply(ind.satukos())
 					}
@@ -1860,11 +1869,10 @@ client.on('group-participants-update', async (anu) => {
 					case 'delchat':
 					case 'delete':
 					case 'd':
-					case '😡':
-					case '😠':
-					case '😳':
+						if (!isUser) return reply(mess.only.userB)
+					if (isBanned) return reply(mess.only.benned)    
 					if (!isGroup)return reply(mess.only.group)
-					if (!isGroupOwner) return reply(mess.only.admin)
+					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 				case 'clone':
@@ -1874,8 +1882,8 @@ client.on('group-participants-update', async (anu) => {
 				case 'klon':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerg()) 
-					if (args.length < 1) return reply(' *TAG YANG MAU DI CLONE!!!* ')
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
+					if (args.length < 1) return reply(' *KAMU BUKAN OWNER!* ')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('TAG ORANGNYA COK!!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
 					try {
