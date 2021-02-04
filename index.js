@@ -44,7 +44,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'END:VCARD' 
 blocked = []   
 prefix = '>','.','#','!','?','$','+','@'
-limitawal = 9999999999999999999999999
+limitawal = 99999
 memberlimit = 10
 cr = '*_Official account Kylabot V.4_*'
 /*************************************/
