@@ -586,20 +586,29 @@ client.on('group-participants-update', async (anu) => {
                 await reply( `Partner found: 🙉\n*${prefix}next* — find a new partner`)
             break
 				case 'transfer':
+				case 'tf':
+				case 'tfuang':
+				case 'tfu':
 				if (!isRegistered) return reply(ind.noregis())
 				if (!q.includes('|')) return  reply(ind.wrongf())
                 const tujuan = q.substring(0, q.indexOf('|') - 1)
                 const jumblah = q.substring(q.lastIndexOf('|') + 1)
                 if (checkATMuser(sender) < jumblah) return reply(`uang mu tidak mencukupi untuk melakukan transfer`)
                 const tujuantf = `${tujuan.replace("@", '')}@s.whatsapp.net`
-                fee = 0.005 *  jumblah
+                fee = 0.100 *  jumlah
                 hasiltf = jumblah - fee
                 addKoinUser(tujuantf, hasiltf)
                 confirmATM(sender, jumblah)
-                addKoinUser('62895710073737@s.whatsapp.net', fee)
+                addKoinUser('6283843313959@s.whatsapp.net', fee)
                 reply(`*「 SUKSES 」*\n\npengiriman uang telah sukses\ndari : +${sender.split("@")[0]}\nke : +${tujuan}\njumblah transfer : ${jumblah}\npajak : ${fee}`)
                 break
 				case 'dompet':
+				case 'ceksaldo':
+				case 'cksl':
+				case 'cekuang':
+				case 'cekcash':
+				case 'cekmoney':
+				case 'ckm':
 				if (!isRegistered) return reply(ind.noregis())
 				const kantong = checkATMuser(sender)
 				reply(ind.uangkau(pushname, sender, kantong))
@@ -609,9 +618,9 @@ client.on('group-participants-update', async (anu) => {
 				case 'bl':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 10000
+				const koinPerlimit = 1000
 				const total = koinPerlimit * payout
-				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
+				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli limit nanti, Kamu bisa membeli limit dengan cara mengumpulkan uang terlebih dahulu. Cek uang kamu dengan cara mengetikan perintah *${prefix}buylimit* , harga 1 limit = 1000 uang.Kamu bisa juga mengumpulkan uang dengan cara chat dengan teman segroup atau bisa dengan cara naik level,maka uang dan limit akan bertambah secara otomatis!`)
 				if ( checkATMuser(sender) >= total ) {
 					confirmATM(sender, total)
 					bayarLimit(sender, payout)
@@ -1515,6 +1524,9 @@ client.on('group-participants-update', async (anu) => {
 					reply(ind.clears())
 					break
 			       case 'block':
+			       case 'blok':
+			       case 'blokir':
+			       case 'blockir':
 				 client.updatePresence(from, Presence.composing) 
 				 client.chatRead (from)
 					if (!isGroup) return reply(ind.groupo())
@@ -1575,6 +1587,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 					case 'grup':
 					case 'group':
+					case 'gc':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
@@ -1582,7 +1595,7 @@ client.on('group-participants-update', async (anu) => {
 					    reply(`*BERHASIL MEMBUKA GROUP*`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'tutup') {
-						reply(`*BERHASIL MENUTUP GROUP`)
+						reply(`*BERHASIL MENUTUP GROUP*`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break      
@@ -1695,7 +1708,7 @@ client.on('group-participants-update', async (anu) => {
                  case 'simi':
                  case 'b':
                  case 'sim':
-					if (args.length < 1) return reply('Hai kak. ${prefix}menu')
+					if (args.length < 1) return reply('Assalamualaikum kak😊')
 					teks = body.slice(5)
 					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}&lang=id`, {method: 'get'})
 					if (anu.erorr) return reply('Simi ga tau kak')
@@ -1808,11 +1821,18 @@ client.on('group-participants-update', async (anu) => {
 					case 'delchat':
 					case 'delete':
 					case 'd':
+					case '😡':
+					case '😠':
+					case '😳':
 					if (!isGroup)return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupOwner) return reply(mess.only.ownerb)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 				case 'clone':
+				case 'cln':
+				case 'kln':
+				case 'klone':
+				case 'klon
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerg()) 
 					if (args.length < 1) return reply(' *TAG YANG MAU DI CLONE!!!* ')
