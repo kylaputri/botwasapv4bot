@@ -43,7 +43,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'TEL;type=CELL;type=VOICE;waid=6283843313959:+62 838-4331-3959\n' 
             + 'END:VCARD' 
 blocked = []   
-prefix = '#'
+prefix = '>','.','#','!','?','$','+','@'
 limitawal = 9999999999999999999999999
 memberlimit = 10
 cr = '*_Official account Kylabot V.4_*'
@@ -936,9 +936,11 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break		
 					case 'infonomor':
+					case 'infonomer':
+					case 'infonmr':
 					if (!isRegistered) return reply(ind.noregis())
 					if (isLimit(sender)) return reply(ind.limitend(pusname))
-                    if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}infonomor 0812345678`)
+                    if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}infonomer 083843313959`)
                 data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infonomor?no=${body.slice(11)}`)
                 if (data.error) return reply(data.error)
                 if (data.result) return reply(data.result)
@@ -983,6 +985,7 @@ client.on('group-participants-update', async (anu) => {
 					await limitAdd(sender)
 					break 
 					case 'setppbot':
+					case 'sppb':
 					if (!isOwner) return reply(ind.ownerb())
 				    client.updatePresence(from, Presence.composing) 
 					if (!isQuotedImage) return reply(`Kirim gambar dengan caption ${prefix}setbotpp atau tag gambar yang sudah dikirim`)
@@ -1005,7 +1008,7 @@ client.on('group-participants-update', async (anu) => {
                     })
 					await limitAdd(sender)
 					break 
-				case 'bcgc':
+				case 'bc274819gc':
 				     if (!isOwner) return reply(ind.ownerb())
 					if (args.length < 1) return reply('.......')
 					anu = await groupMembers
@@ -1055,6 +1058,8 @@ client.on('group-participants-update', async (anu) => {
                     await limitAdd(sender)
 					break 
                     case 'kickall':
+                    case 'kikall':
+                    case 'kal':
                     if (!isOwner) return reply(ind.ownerb())
 			        members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
@@ -1200,12 +1205,13 @@ client.on('group-participants-update', async (anu) => {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*OWNER* : *Hans*\n*AUTHOR* : AYBPR\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
+					teks = `*Nama bot* : ${me.name}\n*OWNER* : *Hans*\n*AUTHOR* : Amrul,Hans,Reza,Rakha,Nabila,Kyla\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
 				case 'blocklist': 
-					teks = '𝗕𝗟𝗢𝗖𝗞 𝗟𝗜𝗦𝗧 :\n'
+				case 'bloklist
+					teks = 'list blockir :\n'
 					for (let block of blocked) {
 						teks += `┣➢ @${block.split('@')[0]}\n`
 					}
@@ -1535,17 +1541,21 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, `perintah Diterima, memblokir ${body.slice(7)}@c.us`, text)
 					break
                     case 'unblock':
+                    case 'unblok':
+                    case 'unblockir':
+                    case 'unblokir':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerb())
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
 					client.sendMessage(from, `𝗽𝗲𝗿𝗶??𝘁𝗮𝗵 𝗗𝗶𝘁𝗲𝗿𝗶𝗺𝗮, 𝗺𝗲𝗺𝗯𝘂𝗸𝗮 ${body.slice(9)}@c.us`, text)
 					break
 				case 'leave': 
+				case 'keluar':
 				if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerb())
 				await reply(from, 'bye').then(() => client.groupLeave(groupId))
 					break
-				case 'bc': 
+				case 'bc103019381637183929': 
 					if (!isOwner) return reply(ind.ownerb()) 
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
@@ -1575,14 +1585,14 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
-					if (args.length < 1) return reply('Yang mau di add jin ya?')
-					if (args[0].startsWith('08')) return reply('Gunakan kode negara mas')
+					if (args.length < 1) return reply('Yang mau di add siapa? dajjal ya?')
+					if (args[0].startsWith('628')) return reply('Gunakan kode negara cok!')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						client.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
-						reply('Gagal menambahkan target, mungkin karena di private')
+						reply('*[GAGAL!]* Target sudah dalam grup/Akun target dalam mode private')
 					}
 					break
 					case 'grup':
@@ -1602,6 +1612,7 @@ client.on('group-participants-update', async (anu) => {
             case 'admin':
             case 'owner':
             case 'creator':
+            case 'own':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
                   client.sendMessage(from, 'Tuh nomer owner ku >_<, jangan spam atau ku block kamu',MessageType.text, { quoted: mek} )
 					break    
@@ -1658,6 +1669,8 @@ client.on('group-participants-update', async (anu) => {
 					}
 					break	
 			     	case 'kick':
+			     	case 'kikmem':
+			     	case 'kik':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
@@ -1666,13 +1679,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 🏃 :\n`
+							teks += `Mampus dikick awokawok 🏃 :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
+						mentions(`mampus dikick awokawok @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
@@ -1780,11 +1793,19 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, `perintah Diterima, membuka blokir wa.me/${body.slice(10)}`, text)
 					break
 				case 'welcome':
+				case 'wlcm':
+				case 'pesansambutan':
+				case 'psnsmbtn':
+				case 'selamatdatang':
+				case 'slmtdtng':
+				case 'slmatdatang':
+				case 'slmatdtang':
+				case 'sambutan':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
-					if (args.length < 1) return reply('Boo :𝘃')
+					if (args.length < 1) return reply('pesan welcome belum diaktifkan!')
 					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('*SUDAH AKTIF* !!!')
+						if (isWelkom) return reply('*SUDAH AKTIF TOD* !!!')
 						welkom.push(from)
 						fs.writeFileSync('./database/bot/welkom.json', JSON.stringify(welkom))
 						reply('❬ 𝗦𝗨𝗞𝗦𝗘𝗦 ❭ 𝗠𝗲𝗻𝗴𝗮𝗸𝘁𝗶𝗳𝗸𝗮𝗻 𝗳𝗶𝘁𝘂𝗿 𝘄𝗲𝗹𝗰𝗼𝗺𝗲/𝗹𝗲𝗳𝘁 𝗱𝗶 𝗴𝗿𝗼𝘂𝗽 𝗶𝗻𝗶️')
