@@ -138,4 +138,4 @@ you've just cloned!!
 ### Donate
 * [`Saweria`](https://saweria.co/Hanzalidituyoyo)
 * [`Dana/Ovo/Gopay/LinkAja: +6281229488729`]
-* [`Pulsa : +6289525609596`]
+* [`Pulsa : +6281229488729`]
