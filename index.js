@@ -1853,7 +1853,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'cln':
 				case 'kln':
 				case 'klone':
-				case 'klon
+				case 'klon':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isOwner) return reply(ind.ownerg()) 
 					if (args.length < 1) return reply(' *TAG YANG MAU DI CLONE!!!* ')
