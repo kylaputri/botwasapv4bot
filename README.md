@@ -16,12 +16,16 @@ you've just cloned!!
 ## Clone this project
 
 ```bash
-> git clone https://github.com/kylaputri/botwasapv4kylaputri
+> git clone https://github.com/kylaputri/botwasapv4bot
 > cd botwasapv4bot
+> apt-get update && apt-get upgrade && pkg update && pkg upgrade
 > bash install.sh
-> node index.js
-```
 
+## Kalau penginstalan bash install.sh eror.Masukan Command dibawah ini berulang kali sampai bisa!
+
+```
+> apt-get update && apt-get upgrade && pkg update && pkg upgrade && bash install.sh && apt-get update && apt-get upgrade && pkg update && pkg upgrade && apt-get update && apt-get upgrade && pkg update && pkg upgrade && bash install.sh && apt-get update && apt-get upgrade && pkg update && pkg upgrade && bash install.sh
+```
 
 
 ### Usage
