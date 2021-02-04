@@ -44,13 +44,13 @@ const vcard = 'BEGIN:VCARD\n'
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
-limitawal = 30
-memberlimit = 30
-cr = '*_official account Kylabot V.4_*'
+limitawal = 9999999999999999999999999
+memberlimit = 10
+cr = '*_Official account Kylabot V.4_*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["6289636032177@s.whatsapp.net","6283843313959@s.whatsapp.net","6285602294077@s.whatsapp.net"]
+const ownerNumber = ["6289636032177@s.whatsapp.net","6283843313959@s.whatsapp.net","62895622002734@s.whatsapp.net","6285602294077@s.whatsapp.net"]
 /************************************/
 
        
@@ -605,9 +605,11 @@ client.on('group-participants-update', async (anu) => {
 				reply(ind.uangkau(pushname, sender, kantong))
 				break
 				case 'buylimit':
+				case 'byl':
+				case 'bl':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 500
+				const koinPerlimit = 10000
 				const total = koinPerlimit * payout
 				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
 				if ( checkATMuser(sender) >= total ) {
@@ -616,7 +618,7 @@ client.on('group-participants-update', async (anu) => {
 					await reply(`*「 PEMBAYARAN BERHASIL 」*\n\n*pengirim* : Admin\n*penerima* : ${pushname}\n*nominal pembelian* : ${payout} \n*harga limit* : ${koinPerlimit}/limit\n*sisa uang mu* : ${checkATMuser(sender)}\n\nproses berhasil dengan nomer pembayaran\n${createSerial(15)}`)
 				} 
 				break
-                case 'moddroid':
+                case 'moddajslroid':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=BotWeA`)
@@ -626,7 +628,7 @@ client.on('group-participants-update', async (anu) => {
 			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
 			break
-			case 'happymod':
+			case 'happymansksod':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=BotWeA`)
@@ -636,7 +638,7 @@ client.on('group-participants-update', async (anu) => {
 			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
 			break
-            case 'bitly':
+            case 'banskmciitly':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                client.updatePresence(from, Presence.composing) 
@@ -661,7 +663,7 @@ client.on('group-participants-update', async (anu) => {
 					})
 					await limitAdd(sender)
 					break
-                case 'blowjob':
+                case 'blowajsmdmjob':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					ranp = getRandom('.gif')
@@ -731,7 +733,7 @@ client.on('group-participants-update', async (anu) => {
 					}
 					await limitAdd(sender)
 					break
-                case 'ranime':
+                case 'rani38292wjekme':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					gatauda = body.slice(8)
@@ -744,6 +746,8 @@ client.on('group-participants-update', async (anu) => {
                 case 'joox':
                 case 'musik':
                 case 'lagu':
+                case 'msic':
+                case 'msik':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                 data = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=BotWeA`, {method: 'get'})
@@ -773,6 +777,8 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'limit':
 				case 'ceklimit':
+				case 'ckl':
+				case 'cl':
 				   if (!isRegistered) return reply(ind.noregis())
 				   checkLimit(sender)
 					break
@@ -1096,11 +1102,12 @@ client.on('group-participants-update', async (anu) => {
                 }
 					break
             	case 'mining':
+            	case 'mng':
                       if (!isRegistered) return reply(ind.noregis())
                       if (isLimit(sender)) return reply(ind.limitend(pushname))
                       if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan oleh owner`)
                       if (isOwner) {
-                      const one = 999
+                      const one = 100
                       addLevelingXp(sender, one)
                       addLevelingLevel(sender, 19)
                       reply(`karena anda owner kami dari team bot mengirim ${one}Xp untuk anda`)
@@ -1197,6 +1204,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
 					break
                 case 'hidetag':
+                case 'htg':
                 if (!isRegistered) return reply(ind.noregis())
                 if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if (!isGroup) return reply(ind.groupo())
