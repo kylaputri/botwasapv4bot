@@ -120,94 +120,89 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Nama* : ${pushname}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
 ┣⊱ *Uang mu* : Rp${uangku} 
-┣⊱ *note: buat beli Limit!*
 ┣⊱ *XP* : ${getLevelingXp(sender)}/${reqXp}
 ┣⊱ *Role* : ${role}
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *User register* : ${_registered.length}
 ┣⊱ *Prefix saat ini* : *${prefix}menu*
-┣⊱ *buat tes botnya on/off* : *${prefix}bot*
+┣⊱ *Buat tes botnya on/off* : *${prefix}bot*
+┣⊱ *Request/Lapor Bug* : *${prefix}bug <yang ingin dilaporkan>*
 ┗━━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
 
 
 ┏━━⊱ *MAKER MENU* ⊰━━┓
 ┣⊱ *${prefix}sticker* 
-┣⊱ *${prefix}avengers* <teks|teks>
-┣⊱ *${prefix}summer* <teks>
-┣⊱ *${prefix}sandwrite* <teks>
-┣⊱ *${prefix}metaldark* <teks>
-┣⊱ *${prefix}dropwater* <teks>
-┣⊱ *${prefix}greenneon* <teks>
-┣⊱ *${prefix}neontext* <teks>
-┣⊱ *${prefix}sumery* <teks>
-┣⊱ *${prefix}blood* <teks>
-┣⊱ *${prefix}firework* <teks>
-┣⊱ *${prefix}lava* <teks>
-┣⊱ *${prefix}qrcode* <teks>
+┣⊱ *${prefix}avengers* *[error]*
+┣⊱ *${prefix}summer* *[error]*
+┣⊱ *${prefix}sandwrite* *[error]*
+┣⊱ *${prefix}metaldark* *[error]*
+┣⊱ *${prefix}dropwater* *[error]*
+┣⊱ *${prefix}greenneon* *[error]*
+┣⊱ *${prefix}neontext* *[error]*
+┣⊱ *${prefix}sumery* *[error]*
+┣⊱ *${prefix}blood* *[error]*
+┣⊱ *${prefix}firework* *[error]*
+┣⊱ *${prefix}lava* *[error]*
+┣⊱ *${prefix}qrcode* *<teks>*
 ┣━━⊱  *FUN MENU*  ⊰━━━┫
-┣⊱ *${prefix}mining*
-┣⊱ *${prefix}bisakah* <teks>
-┣⊱ *${prefix}kapankah* <teks>
-┣⊱ *${prefix}apakah* <teks>
-┣⊱ *${prefix}rate* <teks>
+┣⊱ *${prefix}mining*  *[NGOTAK!]*
+┣⊱ *${prefix}bisakah* *<teks>*
+┣⊱ *${prefix}kapankah* *<teks>*
+┣⊱ *${prefix}apakah* *<teks>*
+┣⊱ *${prefix}rate* *<teks>*
 ┣⊱ *${prefix}slap*
 ┣⊱ *${prefix}tampar*
-┣⊱ *${prefix}moddroid* <teks>
-┣⊱ *${prefix}happymod* <teks>
 ┣⊱ *${prefix}nangis*
 ┣⊱ *${prefix}cium*
 ┣⊱ *${prefix}peluk*
 ┣━━⊱ *MUTUAL* ⊰━━━━━┫
-┣⊱ *${prefix}mutual*
-┣⊱ *${prefix}next*
+┣⊱ *${prefix}mutual* *<chat pribadi>*
+┣⊱ *${prefix}next* *<chat pribadi>*
 ┣━━⊱ *MEDIA MENU* ⊰━━┫
-┣⊱ *${prefix}brainly* [error]
+┣⊱ *${prefix}brainly* *[error]*
 ┣⊱ *${prefix}pinterest*
-┣⊱ *${prefix}resepmasakan* <teks>
-┣⊱ *${prefix}igstalk* <username>
-┣⊱ *${prefix}bitly* <link>
+┣⊱ *${prefix}resepmasakan* *<teks>*
+┣⊱ *${prefix}igstalk* *<username>*
+┣⊱ *${prefix}bitly* *<link>*
 ┣━━⊱ *YT & SONG* ⊰━━━┫
-┣⊱ *${prefix}ytmp3* <link>
-┣⊱ *${prefix}ytmp4* <link>
-┣⊱ *${prefix}joox* <judul>
+┣⊱ *${prefix}ytmp3* *<link>*
+┣⊱ *${prefix}ytmp4* *<link>*
+┣⊱ *${prefix}joox* *<judul lengkap,nama artis>*
 ┣━━⊱  *NSFW MENU*  ⊰━┫
 ┣⊱ *${prefix}anjing*
-┣⊱ *${prefix}blowjob*
-┣⊱ *${prefix}nekonime*
-┣⊱ *${prefix}husbu*
-┣⊱ *${prefix}ranime*
+┣⊱ *${prefix}blowjob* *<18+>*
+┣⊱ *${prefix}nekonime* *<18+>*
+┣⊱ *${prefix}husbu* *<18+>*
+┣⊱ *${prefix}ranime* *<18+>*
 ┣━━⊱ *LIMIT & UANG* ⊰━┫
-┣⊱ *${prefix}limit* 
-┣⊱ *${prefix}buylimit* <jumblah>
-┣⊱ *${prefix}transfer* <tag |jumlah>
-┣⊱ *${prefix}dompet*
+┣⊱ *${prefix}ceklimit*
+┣⊱ *${prefix}buylimit* *<jumblah>*
+┣⊱ *${prefix}transfer* *<tag |jumlah>*
+┣⊱ *${prefix}ceksaldo*
 ┣━━⊱ *GROUP MENU* ⊰━┫
-┣⊱ *${prefix}hidetag*
-┣⊱ *${prefix}grouplist*
+┣⊱ *${prefix}hidetag* *[limit]*
+┣⊱ *${prefix}grouplist* *[error]
 ┣⊱ *${prefix}level*
 ┣⊱ *${prefix}linkgc*
 ┣⊱ *${prefix}tagall*
 ┣⊱ *${prefix}setpp*
-┣⊱ *${prefix}add* <tag>
-┣⊱ *${prefix}kick* <tag>
-┣⊱ *${prefix}setname* <teks>
-┣⊱ *${prefix}setdesc* <teks>
-┣⊱ *${prefix}demote* <tag>
-┣⊱ *${prefix}promote* <tag>
+┣⊱ *${prefix}add* *<tag>*
+┣⊱ *${prefix}kick* *<tag>*
+┣⊱ *${prefix}setname* *<teks>*
+┣⊱ *${prefix}setdesc* *<teks>*
+┣⊱ *${prefix}demote* *<tag>*
+┣⊱ *${prefix}promote* *<tag>*
 ┣⊱ *${prefix}listadmin*
-┣⊱ *${prefix}group* [buka/tutup]
-┣⊱ *${prefix}delete* [tag pesan]
-┣⊱ *${prefix}leveling* [enable/disable]
-┣⊱ *${prefix}nsfw* [1/0]
+┣⊱ *${prefix}group* *[buka/tutup]*
+┣⊱ *${prefix}delete* *[tag pesan]*
+┣⊱ *${prefix}leveling* *[enable/disable]*
+┣⊱ *${prefix}nsfw* [1/0] 
 ┣⊱ *${prefix}simih* [1/0]
-┣⊱ *${prefix}bot* <teks>
+┣⊱ *${prefix}bot* *<teks yang mau di tanyakan>*
 ┣⊱ *${prefix}welcome* [1/0]
 ┣━━⊱ *OWNER MENU* ⊰━┫
-┣⊱ *${prefix}bc* [error]
-┣⊱ *${prefix}bcgc* [error]
-┣⊱ *${prefix}kickall* <rawan ban>
-┣⊱ *${prefix}setreply* <teks>
-┣⊱ *${prefix}setprefix* <symbol>
+┣⊱ *${prefix}setreply* *<teks>*
+┣⊱ *${prefix}setprefix* *<symbol>*
 ┣⊱ *${prefix}clearall*
 ┣⊱ *${prefix}block* <tag>
 ┣⊱ *${prefix}unblock* <tag>
