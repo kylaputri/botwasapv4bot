@@ -126,12 +126,12 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *User register* : ${_registered.length}
 ┣⊱ *Prefix saat ini* : *${prefix}menu*
 ┣⊱ *Buat tes botnya on/off* : *${prefix}bot*
-┣⊱ *Request/Lapor Bug* : *${prefix}bug <yang ingin dilaporkan>*
-┗━━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
+┗━━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 
 
 ┏━━⊱ *MAKER MENU* ⊰━━┓
-┣⊱ *${prefix}sticker* 
+┣⊱ *${prefix}sticker*
+┣⊱ *${prefix}bug* *<Keluhan>*
 ┣⊱ *${prefix}avengers* *<teks|teks>*
 ┣⊱ *${prefix}summer* *<teks>*
 ┣⊱ *${prefix}sandwrite* *<teks>*
@@ -215,10 +215,10 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *HANS* <dev>
 ┣⊱ *Amrul* <dev>
 ┣⊱ *Nabila* <dev>
-┣⊱ *Kyla*
+┣⊱ *Berlian*
 ┣⊱ *MHANKBARBARS* <sc ori>
 ┣⊱ *AYBPR TEAM* <team>
-┗━━⊱  ⸨ *AYBPR* ⸩  ⊰━━━━┛
+┗━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 `
 }
 
