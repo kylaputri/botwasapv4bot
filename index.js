@@ -38,15 +38,15 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Hans\n' 
+            + 'FN:Yoyo\n' 
             + 'ORG: Pengembang XBot;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=6283843313959:+62 838-4331-3959\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
-limitawal = 100
+limitawal = 9999
 memberlimit = 10
-cr = '*_Official account AYBPR_*'
+cr = '*_Official Account GetonBot V.4.1_*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
@@ -1140,12 +1140,12 @@ client.on('group-participants-update', async (anu) => {
                       if (isLimit(sender)) return reply(ind.limitend(pushname))
                       if (!isEventon) return reply(`maaf kak ${pushname} event mining tidak di aktifkan oleh Owner`)
                       if (isOwner) {
-                      const one = 100
+                      const one = 99999
                       addLevelingXp(sender, one)
                       addLevelingLevel(sender, 19)
                       reply(`karena Anda owner kami dari team bot mengirim ${one}Xp untuk Anda`)
                       }else{
-                      const mining = Math.ceil(Math.random() * 1000)
+                      const mining = Math.ceil(Math.random() * 99999)
                       addLevelingXp(sender, mining)
                       await reply(`*selamat* ${pushname} kamu mendapatkan *${mining}Xp*`)
                       }
@@ -1531,16 +1531,17 @@ client.on('group-participants-update', async (anu) => {
 			        await limitAdd(sender)
 					break
 				case 'tagall':
-					if (!isGroup) return reply(ind.groupo())
-					if (!isGroupAdmins) return reply(ind.admin())
+				client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
+					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `┣➥ @${mem.jid.split('@')[0]}\n`
+						teks += `╠➥ ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
 						members_id.push(mem.jid)
 					}
-					mentions(teks, members_id, true)
+					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙')
 					break
 				case 'clearall':
 					if (!isOwner) return reply(ind.ownerb())
