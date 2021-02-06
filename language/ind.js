@@ -132,17 +132,17 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 
 ┏━━⊱ *MAKER MENU* ⊰━━┓
 ┣⊱ *${prefix}sticker* 
-┣⊱ *${prefix}avengers* *[error]*
-┣⊱ *${prefix}summer* *[error]*
-┣⊱ *${prefix}sandwrite* *[error]*
-┣⊱ *${prefix}metaldark* *[error]*
-┣⊱ *${prefix}dropwater* *[error]*
-┣⊱ *${prefix}greenneon* *[error]*
-┣⊱ *${prefix}neontext* *[error]*
-┣⊱ *${prefix}sumery* *[error]*
-┣⊱ *${prefix}blood* *[error]*
-┣⊱ *${prefix}firework* *[error]*
-┣⊱ *${prefix}lava* *[error]*
+┣⊱ *${prefix}avengers* *<teks|teks>*
+┣⊱ *${prefix}summer* *<teks>*
+┣⊱ *${prefix}sandwrite* *<teks>*
+┣⊱ *${prefix}metaldark* *<teks>*
+┣⊱ *${prefix}dropwater* *<teks>*
+┣⊱ *${prefix}greenneon* *<teks>*
+┣⊱ *${prefix}neontext* *<teks>*
+┣⊱ *${prefix}sumery* *<teks>*
+┣⊱ *${prefix}blood* *<teks>*
+┣⊱ *${prefix}firework* *<teks>*
+┣⊱ *${prefix}lava* *<teks>*
 ┣⊱ *${prefix}qrcode* *<teks>*
 ┣━━⊱  *FUN MENU*  ⊰━━━┫
 ┣⊱ *${prefix}mining*  *[NGOTAK!]*
@@ -159,7 +159,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}mutual* *<chat pribadi>*
 ┣⊱ *${prefix}next* *<chat pribadi>*
 ┣━━⊱ *MEDIA MENU* ⊰━━┫
-┣⊱ *${prefix}brainly* *[error]*
+┣⊱ *${prefix}brainly* 
 ┣⊱ *${prefix}pinterest*
 ┣⊱ *${prefix}resepmasakan* *<teks>*
 ┣⊱ *${prefix}igstalk* *<username>*
@@ -167,7 +167,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣━━⊱ *YT & SONG* ⊰━━━┫
 ┣⊱ *${prefix}ytmp3* *<link>*
 ┣⊱ *${prefix}ytmp4* *<link>*
-┣⊱ *${prefix}joox* *<judul lengkap,nama artis>*
+┣⊱ *${prefix}joox* 
 ┣━━⊱  *NSFW MENU*  ⊰━┫
 ┣⊱ *${prefix}anjing*
 ┣⊱ *${prefix}blowjob* *<18+>*
@@ -176,7 +176,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}ranime* *<18+>*
 ┣━━⊱ *LIMIT & UANG* ⊰━┫
 ┣⊱ *${prefix}ceklimit*
-┣⊱ *${prefix}buylimit* *<jumblah>*
+┣⊱ *${prefix}buylimit* *<jumlah>*
 ┣⊱ *${prefix}transfer* *<tag |jumlah>*
 ┣⊱ *${prefix}ceksaldo*
 ┣━━⊱ *GROUP MENU* ⊰━┫
