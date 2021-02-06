@@ -46,7 +46,7 @@ blocked = []
 prefix = '#'
 limitawal = 100
 memberlimit = 10
-cr = '*_Official account Kylabot V.4.1_*'
+cr = '*_Official account AYBPR_*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
@@ -752,12 +752,13 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender)
 					break
-					case 'bugreport':
+					case 'report':
 					case 'bug':
+					case 'bugreport':
                 if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-                     const pesan = body.slice(10)
-                      if (pesan.length > 300) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
+                if (!isUser) return reply(mess.only.userB)
+                     const pesan = body.slice(8)
+                      if (pesan.length > 300) return client.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, {quoted: mek})
                         var nomor = mek.participant
                        const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
 
@@ -765,7 +766,7 @@ client.on('group-participants-update', async (anu) => {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6283843313959@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('628311800241@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
                 case 'joox':
@@ -1742,10 +1743,10 @@ client.on('group-participants-update', async (anu) => {
                  case 'simi':
                  case 'b':
                  case 'sim':
-					if (args.length < 1) return reply('HAI ANJIM😊')
+					if (args.length < 1) return reply('APAAAA!!!!')
 					teks = body.slice(5)
-					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}&lang=id`, {method: 'get'})
-					if (anu.erorr) return reply('Simi ga tau kak')
+					anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${teks}`, {method: 'get'})
+					if (anu.error) return reply('Simi ga tau kak')
 					reply(`${anu.success}\n\n*Simsimi chat*`)
 					break
 				case 'simih':
@@ -1860,19 +1861,18 @@ client.on('group-participants-update', async (anu) => {
 					} else {
 						reply(ind.satukos())
 					}
-					break
+				ini	break
 					case 'delete':
 					case 'del':
 					case 'hpus':
 					case 'delet':
 					case 'hapuschat':
 					case 'delchat':
-					case 'delete':
-					case 'd':
-						if (!isUser) return reply(mess.only.userB)
-					if (isBanned) return reply(mess.only.benned)    
+					case 'del':
+					case 'oh':
+					case 'y':
 					if (!isGroup)return reply(mess.only.group)
-					if (!isGroupAdmins)return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 				case 'clone':
