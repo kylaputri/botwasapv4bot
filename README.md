@@ -10,7 +10,7 @@ you've just cloned!!
 
 ```bash
 > apt-get update && apt-get upgrade && pkg update && pkg upgrade && pkg install bash && apt-get update && apt-get upgrade && pkg update && pkg upgrade && pkg install git
-```
+
 
 
 
