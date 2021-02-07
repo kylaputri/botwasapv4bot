@@ -1111,7 +1111,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'daftar':
 				case 'register':
 				case 'daf':
-				case 'req':
+				case 'reg':
                 if (isRegistered) return  reply(ind.rediregis())
                 if (!q.includes('|')) return  reply(ind.wrongf())
                 const namaUser = q.substring(0, q.indexOf('|') - 0)
@@ -1862,7 +1862,7 @@ client.on('group-participants-update', async (anu) => {
 					} else {
 						reply(ind.satukos())
 					}
-				ini	break
+					break
 					case 'delete':
 					case 'del':
 					case 'hpus':
