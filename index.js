@@ -742,7 +742,7 @@ client.on('group-participants-update', async (anu) => {
 					}
 					await limitAdd(sender)
 					break
-                case 'rani38292wjekme':
+                case 'ranime':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					gatauda = body.slice(8)
