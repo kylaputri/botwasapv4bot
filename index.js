@@ -500,7 +500,7 @@ client.on('group-participants-update', async (anu) => {
         }
       
             //function balance
-            if (isRegister && isGroup ) {
+            if (isRegistered && isGroup ) {
             const checkATM = checkATMuser(sender)
             try {
                 if (checkATM === undefined) addATM(sender)
