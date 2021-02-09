@@ -422,7 +422,7 @@ client.on('group-participants-update', async (anu) => {
             role = 'Master ll'
         } else if (levelRole <= 39) {
             role = 'Master l'
-        } else if (levelRole <= MAX) {
+        } else if (levelRole <= 99) {
             role = 'GM'
         }
 
