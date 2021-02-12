@@ -196,14 +196,16 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}clone* <tag>
 ┣⊱ *${prefix}setppbot*
 ┣━━⊱ *THANKS TO* ⊰━━┫
-┣⊱ *creazyuwetea*
-┣⊱ *Affis* <dev>
-┣⊱ *HANS* <dev>
-┣⊱ *Amrul* <dev>
-┣⊱ *Nabila* <dev>
-┣⊱ *Berlian*
-┣⊱ *MHANKBARBARS* <sc ori>
-┣⊱ *AYBP TEAM* <team>
+┣⊱ *Acil* *<GAY>*
+┣⊱ *Affis* *<GAY>*
+┣⊱ *HANS* *<GAY>*
+┣⊱ *Kevin* *<GAY>*
+┣⊱ *Rofek* *<GAY>*
+┣⊱ *Amrul* *<GAY>*
+┣⊱ *Nabila* *<Cans>*
+┣⊱ *Berlian* *<Cans>*
+┣⊱ *Naya* *<Cans>*
+┣⊱ *AYBB TEAM* <team>
 ┗━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 `
 }
