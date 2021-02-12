@@ -129,21 +129,10 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┗━━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 
 
-┏━━⊱ *MAKER MENU* ⊰━━┓
+┏━━⊱ *SOSIAL MEDIA* ⊰━━┓
+┣⊱ *Instagram: @Creazyuwetea*
+┣━━⊱  *MENU MAKER*  ⊰━━━┫
 ┣⊱ *${prefix}sticker*
-┣⊱ *${prefix}bug* *<Keluhan>*
-┣⊱ *${prefix}avengers* *<teks|teks>*
-┣⊱ *${prefix}summer* *<teks>*
-┣⊱ *${prefix}sandwrite* *<teks>*
-┣⊱ *${prefix}metaldark* *<teks>*
-┣⊱ *${prefix}dropwater* *<teks>*
-┣⊱ *${prefix}greenneon* *<teks>*
-┣⊱ *${prefix}neontext* *<teks>*
-┣⊱ *${prefix}sumery* *<teks>*
-┣⊱ *${prefix}blood* *<teks>*
-┣⊱ *${prefix}firework* *<teks>*
-┣⊱ *${prefix}lava* *<teks>*
-┣⊱ *${prefix}qrcode* *<teks>*
 ┣━━⊱  *FUN MENU*  ⊰━━━┫
 ┣⊱ *${prefix}mining*  *[NGOTAK!]*
 ┣⊱ *${prefix}bisakah* *<teks>*
@@ -159,21 +148,16 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}mutual* *<chat pribadi>*
 ┣⊱ *${prefix}next* *<chat pribadi>*
 ┣━━⊱ *MEDIA MENU* ⊰━━┫
-┣⊱ *${prefix}brainly* 
-┣⊱ *${prefix}pinterest*
-┣⊱ *${prefix}resepmasakan* *<teks>*
+┣⊱ *${prefix}brainly* *<teks>*
+┣⊱ *${prefix}pinterest* *[error]*
 ┣⊱ *${prefix}igstalk* *<username>*
-┣⊱ *${prefix}bitly* *<link>*
 ┣━━⊱ *YT & SONG* ⊰━━━┫
 ┣⊱ *${prefix}ytmp3* *<link>*
 ┣⊱ *${prefix}ytmp4* *<link>*
 ┣⊱ *${prefix}joox* 
+┣⊱ *${prefix}play*
 ┣━━⊱  *NSFW MENU*  ⊰━┫
 ┣⊱ *${prefix}anjing*
-┣⊱ *${prefix}blowjob* *<18+>*
-┣⊱ *${prefix}nekonime* *<18+>*
-┣⊱ *${prefix}husbu* *<18+>*
-┣⊱ *${prefix}ranime* *<18+>*
 ┣━━⊱ *LIMIT & UANG* ⊰━┫
 ┣⊱ *${prefix}ceklimit*
 ┣⊱ *${prefix}buylimit* *<jumlah>*
@@ -181,11 +165,12 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}ceksaldo*
 ┣━━⊱ *GROUP MENU* ⊰━┫
 ┣⊱ *${prefix}hidetag* *[limit]*
-┣⊱ *${prefix}grouplist* *[error]
+┣⊱ *${prefix}grouplist* *[error]*
 ┣⊱ *${prefix}level*
 ┣⊱ *${prefix}linkgc*
 ┣⊱ *${prefix}tagall*
 ┣⊱ *${prefix}setpp*
+┣⊱ *${prefix}antilink* [1/0]
 ┣⊱ *${prefix}add* *<tag>*
 ┣⊱ *${prefix}kick* *<tag>*
 ┣⊱ *${prefix}setname* *<teks>*
@@ -211,13 +196,14 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}clone* <tag>
 ┣⊱ *${prefix}setppbot*
 ┣━━⊱ *THANKS TO* ⊰━━┫
+┣⊱ *creazyuwetea*
 ┣⊱ *Affis* <dev>
 ┣⊱ *HANS* <dev>
 ┣⊱ *Amrul* <dev>
 ┣⊱ *Nabila* <dev>
 ┣⊱ *Berlian*
 ┣⊱ *MHANKBARBARS* <sc ori>
-┣⊱ *AYBPR TEAM* <team>
+┣⊱ *AYBP TEAM* <team>
 ┗━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 `
 }
