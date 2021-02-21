@@ -304,7 +304,6 @@ client.on('group-participants-update', async (anu) => {
 			if (mek.key.fromMe) return
 			global.blocked
 			const content = JSON.stringify(mek.message)
-			const type = Object.keys(mek.message)[0]
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
 			const timi = moment.tz('Asia/Jakarta').add(30, 'days').calendar();
