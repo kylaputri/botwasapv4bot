@@ -79,45 +79,45 @@ exports.pc = () => {
 }
 
 exports.registered = (namaUser, umurUser, serialUser, time, sender) => {
-	return`*「 DATA NEGARA 」*\n\nkamu sudah terdaftar dengan data \n\n┏━⊱nama\n┗⊱${namaUser}\n┏━⊱nomer\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱umur\n┗⊱${umurUser}\n┏━⊱waktu pendaftaran\n┗⊱${time}\n\n┏━❉ *NS* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : jangan sampai lupa nomer ini karena ini penting:v`
+	return`*「 DATA CALON MANTU 」*\n\nkamu sudah terdaftar dengan *DATA CALON MANTU* \n\n┏━⊱nama\n┗⊱${namaUser}\n┏━⊱nomer\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱umur\n┗⊱${umurUser}\n┏━⊱waktu pendaftaran\n┗⊱${time}\n\n┏━❉ *NS* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : jangan sampai lupa nomer ini karena ini penting ya ajg:v`
 }
 
 exports.cmdnf = (prefix, command) => {
 	return`command *${prefix}${command}* tidak di temukan\coba tulis *${prefix}menu*`
 }
 
-exports.owneresce = (pushname) => {
-	return`*maaf tapi ${pushname} bukan owner script*`
+exports.owneresce = (namaUser) => {
+	return`*maaf tapi ${namaUser} bukan owner script*`
 }
 
-exports.reglevelaha = (command, pushname, getLevelingLevel, sender, aha) => {
-	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${aha}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
+exports.reglevelaha = (command, namaUser, getLevelingLevel, sender, aha) => {
+	return`*Maaf ${namaUser} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${aha}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.reglevelahb = (command, pushname, getLevelingLevel, sender, ahb) => {
-	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahb}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
+exports.reglevelahb = (command, namaUser, getLevelingLevel, sender, ahb) => {
+	return`*Maaf ${namaUser} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahb}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.reglevelahc = (command, pushname, getLevelingLevel, sender, ahc) => {
-	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahc}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
+exports.reglevelahc = (command, namaUser, getLevelingLevel, sender, ahc) => {
+	return`*Maaf ${namaUser} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahc}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.reglevelahd = (command, pushname, getLevelingLevel, sender, ahd) => {
-	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahd}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
+exports.reglevelahd = (command, namaUser, getLevelingLevel, sender, ahd) => {
+	return`*Maaf ${namaUser} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahd}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.reglevelahe = (command, pushname, getLevelingLevel, sender, ahe) => {
-	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahe}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
+exports.reglevelahe = (command, namaUser, getLevelingLevel, sender, ahe) => {
+	return`*Maaf ${namaUser} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahe}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.reglevelahf = (command, pushname, getLevelingLevel, sender, ahf) => {
-	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahf}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
+exports.reglevelahf = (command, namaUser, getLevelingLevel, sender, ahf) => {
+	return`*Maaf ${namaUser} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahf}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role) => { 
+exports.menu = (namaUser, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role) => { 
 	return `
 ┏━━━⊱  *ABOUT USER*  ⊰━━┓
-┣⊱ *Nama* : ${pushname}
+┣⊱ *Nama* : ${namaUser}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
 ┣⊱ *Uang mu* : Rp${uangku} 
 ┣⊱ *XP* : ${getLevelingXp(sender)}/${reqXp}
@@ -149,7 +149,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}next* *<chat pribadi>*
 ┣━━⊱ *MEDIA MENU* ⊰━━┫
 ┣⊱ *${prefix}brainly* *<teks>*
-┣⊱ *${prefix}pinterest* *[error]*
+┣⊱ *${prefix}pinterest* *<teks>*
 ┣⊱ *${prefix}igstalk* *<username>*
 ┣━━⊱ *YT & SONG* ⊰━━━┫
 ┣⊱ *${prefix}ytmp3* *<link>*
@@ -170,7 +170,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}linkgc*
 ┣⊱ *${prefix}tagall*
 ┣⊱ *${prefix}setpp*
-┣⊱ *${prefix}antilink* [1/0]
+┣⊱ *${prefix}antilink* [1/0] *[error]*
 ┣⊱ *${prefix}add* *<tag>*
 ┣⊱ *${prefix}kick* *<tag>*
 ┣⊱ *${prefix}setname* *<teks>*
@@ -182,7 +182,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}delete* *[tag pesan]*
 ┣⊱ *${prefix}leveling* *[enable/disable]*
 ┣⊱ *${prefix}nsfw* [1/0] 
-┣⊱ *${prefix}simih* [1/0]
+┣⊱ *${prefix}simih* [1/0] *[error]*
 ┣⊱ *${prefix}bot* *<teks yang mau di tanyakan>*
 ┣⊱ *${prefix}welcome* [1/0]
 ┣━━⊱ *OWNER MENU* ⊰━┫
@@ -201,19 +201,20 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *HANS* *<GAY>*
 ┣⊱ *Kevin* *<GAY>*
 ┣⊱ *Rofek* *<GAY>*
+┣⊱ *Rakha* *<GAY>*
 ┣⊱ *Amrul* *<GAY>*
 ┣⊱ *Nabila* *<Cans>*
 ┣⊱ *Berlian* *<Cans>*
 ┣⊱ *Naya* *<Cans>*
-┣⊱ *AYBB TEAM* <team>
+┣⊱ *AYBB TEAM Bot* *<team>*
 ┗━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 `
 }
 
-exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel, role) => {
+exports.levelup = (namaUser, sender, getLevelingXp,  getLevel, getLevelingLevel, role) => {
 	return`
 *「 SELAMAT 」*
-┏⊱ *Nama* : ${pushname}
+┏⊱ *Nama* : ${namaUser}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
 ┣⊱ *Xp* : ${getLevelingXp(sender)}
 ┣⊱ *Limit* : +3
@@ -221,8 +222,8 @@ exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel,
 ┗⊱ *Level* : ${getLevel} ⊱ ${getLevelingLevel(sender)}
 `}
  
-exports.limitend = (pushname) => {
-	return`*maaf ${pushname} limit hari ini habis*\n*beli limit untuk mendapatkan limit/ naik level*`
+exports.limitend = (namaUse) => {
+	return`*maaf ${namaUser} limit hari ini habis*\n*beli limit untuk mendapatkan limit/ naik level*`
 }
 
 exports.limitcount = (limitCounts) => {
@@ -237,6 +238,6 @@ exports.satukos = () => {
 	return`*Tambah parameter 1/enable atau 0/disable`
 }
 
-exports.uangkau = (pushname, sender, uangkau) => {
-	return`*┏⊱ 「 ATM 」⊰━┓*\n┣⊱ *Nama* : ${pushname}\n┣⊱ *Nomer* : ${sender.split("@")[0]}\n┣⊱ *Uang* : ${uangkau}\n┗━━━━━━━━━━`
+exports.uangkau = (namaUser, sender, uangkau) => {
+	return`*┏⊱ 「 ATM 」⊰━┓*\n┣⊱ *Nama* : ${namaUser}\n┣⊱ *Nomer* : ${sender.split("@")[0]}\n┣⊱ *Uang* : ${uangkau}\n┗━━━━━━━━━━`
 }
