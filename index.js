@@ -331,7 +331,7 @@ client.on('group-participants-update', async (anu) => {
 			const q = args.join(' ')
 			const botNumber = client.user.jid
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
-			pushname = client.contacts[sender] != SAYA TIDAK MENGENALMU ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
+			pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupId = isGroup ? groupMetadata.jid : ''
