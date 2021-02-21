@@ -554,8 +554,6 @@ client.on('group-participants-update', async (anu) => {
 					break
 					case 'antilinkgroup':
                                 case 'antilink':
-                                if (!isGroup) return reply(ind.groupo())
-                                	if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
