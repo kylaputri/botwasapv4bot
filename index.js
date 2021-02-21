@@ -559,7 +559,7 @@ client.on('group-participants-update', async (anu) => {
 					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
 					if (Number(args[0]) === 1) {
 						if (isAntiLink) return reply('anti link group sudah aktif')
-						>.push(from)
+						push(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
 						reply('Sukses mengaktifkan anti link group,di group ini ✔️')
 						client.sendMessage(from,`Perhatian kepada seluruh member anti link group aktif apabila anda mengirim link group anda akan di kick dari group`, text)
